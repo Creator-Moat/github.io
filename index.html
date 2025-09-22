@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creator Moat™ - Landing + Monetize in Seconds</title>
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(168, 85, 247, 0.05) 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .btn-glow {
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+        }
+        .btn-glow:hover {
+            box-shadow: 0 0 30px rgba(99, 102, 241, 0.6);
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .floating-card {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .animated-gradient {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background: #10b981;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.2); opacity: 0.7; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .mockup-glow {
+            box-shadow: 0 0 60px rgba(99, 102, 241, 0.3);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .pricing-card-featured {
+            position: relative;
+            overflow: hidden;
+        }
+        .pricing-card-featured::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            animation: shine 3s infinite;
+        }
+        @keyframes shine {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .hero-stats {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .testimonial-card {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(168, 85, 247, 0.05) 100%);
+            border: 1px solid rgba(99, 102, 241, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full glass-nav z-50 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold gradient-text">Creator Moat™</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#how-it-works" class="nav-link text-gray-600 hover:text-purple-600">How It Works</a>
+                    <a href="#pricing" class="nav-link text-gray-600 hover:text-purple-600">Pricing</a>
+                    <a href="#features" class="nav-link text-gray-600 hover:text-purple-600">Features</a>
+                    <button class="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-2 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl">
+                        Get Started Free
+                    </button>
+                </div>
+                <button class="md:hidden" id="mobile-menu-button">
+                    <i data-feather="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-40 transform translate-x-full transition-transform duration-300">
+        <div class="flex justify-end p-4">
+            <button id="close-menu" class="p-2">
+                <i data-feather="x" class="w-6 h-6"></i>
+            </button>
+        </div>
+        <div class="flex flex-col items-center space-y-8 mt-16">
+            <a href="#how-it-works" class="text-xl text-gray-700 hover:text-purple-600">How It Works</a>
+            <a href="#pricing" class="text-xl text-gray-700 hover:text-purple-600">Pricing</a>
+            <a href="#features" class="text-xl text-gray-700 hover:text-purple-600">Features</a>
+            <button class="bg-purple-600 text-white px-8 py-3 rounded-lg hover:bg-purple-700">
+                Get Started Free
+            </button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-12 md:pt-32 md:pb-20 hero-gradient min-h-screen flex items-center relative overflow-hidden">
+        <!-- Animated Background Elements -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse"></div>
+            <div class="absolute top-3/4 right-1/4 w-64 h-64 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse" style="animation-delay: 2s;"></div>
+            <div class="absolute bottom-1/4 left-1/2 w-64 h-64 bg-indigo-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse" style="animation-delay: 4s;"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0" data-aos="fade-right">
+                    <div class="mb-6">
+                        <span class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-100 to-pink-100 text-purple-700 rounded-full text-sm font-semibold">
+                            <div class="pulse-dot mr-2"></div>
+                            🔥 12,847 creators launched this week
+                        </span>
+                    </div>
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-6 leading-tight">
+                        The Only <span class="text-gradient">Creator-First</span> Launchpad.
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8 leading-relaxed max-w-2xl">
+                        Be first-to-market with AI-built, Stripe-ready landing pages.
+                        From spark to sale in under 60 seconds — zero code, zero waiting lists, zero stress.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                        <button class="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all transform hover:scale-105 shadow-lg hover:shadow-2xl btn-glow">
+                            Get Started Free →
+                        </button>
+                        <button class="border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-all transform hover:scale-105">
+                            View Pricing
+                        </button>
+                    </div>
+                    <div class="flex items-center space-x-6">
+                        <p class="text-sm text-gray-500">3 free previews • 60-second setup • No card</p>
+                        <div class="flex items-center space-x-2">
+                            <i data-feather="zap" class="w-4 h-4 text-yellow-500"></i>
+                            <span class="text-sm text-gray-500">⚡ Lightning SSL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2" data-aos="fade-left">
+                    <div class="relative floating-card">
+                        <div class="absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-400 rounded-3xl transform rotate-6 mockup-glow"></div>
+                        <div class="relative bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100">
+                            <!-- Mock Landing Page Header -->
+                            <div class="animated-gradient p-8">
+                                <div class="flex items-center justify-between mb-6">
+                                    <div class="text-white font-bold text-xl flex items-center">
+                                        <div class="w-8 h-8 bg-white/20 rounded-lg mr-3 flex items-center justify-center">
+                                            <i data-feather="dumbbell" class="w-4 h-4"></i>
+                                        </div>
+                                        FitFlow Pro
+                                    </div>
+                                    <button class="bg-white text-purple-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105">
+                                        Buy Now $49
+                                    </button>
+                                </div>
+                                <h1 class="text-white text-3xl font-bold mb-4">Transform Your Fitness Journey</h1>
+                                <p class="text-white/90 text-lg">Premium workout app with AI coaching</p>
+                            </div>
+                            
+                            <!-- Mock Content -->
+                            <div class="p-8 space-y-6">
+                                <div class="flex items-center space-x-3">
+                                    <div class="pulse-dot"></div>
+                                    <span class="text-gray-700 font-medium">✨ AI-powered workout recommendations</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="pulse-dot"></div>
+                                    <span class="text-gray-700 font-medium">📊 Track progress with detailed analytics</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="pulse-dot"></div>
+                                    <span class="text-gray-700 font-medium">🏆 Personalized fitness challenges</span>
+                                </div>
+                                
+                                <!-- Mock Testimonial -->
+                                <div class="testimonial-card rounded-lg p-4 mt-6">
+                                    <div class="flex items-center mb-3">
+                                        <div class="w-10 h-10 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full mr-3 flex items-center justify-center">
+                                            <span class="text-white font-semibold text-sm">SM</span>
+                                        </div>
+                                        <div>
+                                            <p class="font-semibold text-sm">Sarah M.</p>
+                                            <div class="flex items-center">
+                                                <i data-feather="star" class="w-3 h-3 text-yellow-400 fill-current"></i>
+                                                <i data-feather="star" class="w-3 h-3 text-yellow-400 fill-current"></i>
+                                                <i data-feather="star" class="w-3 h-3 text-yellow-400 fill-current"></i>
+                                                <i data-feather="star" class="w-3 h-3 text-yellow-400 fill-current"></i>
+                                                <i data-feather="star" class="w-3 h-3 text-yellow-400 fill-current"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-700 text-sm italic">"Lost 15 lbs in 3 months! The AI coach keeps me motivated every day."</p>
+                                </div>
+                                
+                                <!-- Mock Stats -->
+                                <div class="grid grid-cols-3 gap-4 mt-6 text-center">
+                                    <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg p-3">
+                                        <p class="text-2xl font-bold text-gradient">10k+</p>
+                                        <p class="text-xs text-gray-500">Happy Users</p>
+                                    </div>
+                                    <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg p-3">
+                                        <p class="text-2xl font-bold text-gradient">4.9</p>
+                                        <p class="text-xs text-gray-500">App Rating</p>
+                                    </div>
+                                    <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg p-3">
+                                        <p class="text-2xl font-bold text-gradient">30</p>
+                                        <p class="text-xs text-gray-500">Day Challenge</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="pt-32 md:pt-48 md:pb-32 bg-white -mt-24 md:-mt-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Beat the Market in 60 Seconds</h2>
+                <p class="text-xl text-gray-600">Creator Moat is the fastest path from spark to sale — no code, no waiting, no kidding.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-gradient-to-br from-purple-100 to-pink-100 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 transform hover:rotate-12 transition-transform">
+                        <i data-feather="zap" class="w-10 h-10 text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Drop Your Idea</h3>
+                    <p class="text-gray-600 leading-relaxed">Type one sentence — we auto-detect digital, physical, subscription, or service.</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-gradient-to-br from-purple-100 to-pink-100 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 transform hover:rotate-12 transition-transform">
+                        <i data-feather="sparkles" class="w-10 h-10 text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">AI Publishes in 15s</h3>
+                    <p class="text-gray-600 leading-relaxed">Our engine writes copy, picks images, and builds a high-converting page before you blink.</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-gradient-to-br from-purple-100 to-pink-100 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 transform hover:rotate-12 transition-transform">
+                        <i data-feather="credit-card" class="w-10 h-10 text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Stripe = One Click</h3>
+                    <p class="text-gray-600 leading-relaxed">Paste your Stripe key — we auto-add upsells, tax, and Apple Pay in seconds.</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="bg-gradient-to-br from-purple-100 to-pink-100 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 transform hover:rotate-12 transition-transform">
+                        <i data-feather="rocket" class="w-10 h-10 text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Go Live & Go Viral</h3>
+                    <p class="text-gray-600 leading-relaxed">Hit publish — get a shareable link, QR code, and SEO juice instantly. No DNS voodoo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 md:py-32 bg-gray-50 -mt-16 md:-mt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Why Creator Moat™</h2>
+                <p class="text-xl text-gray-600">Everything you need to succeed online</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 relative">
+                <div class="bg-white p-8 rounded-2xl shadow-xl card-hover border border-gray-100" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-gradient-to-br from-yellow-100 to-orange-100 w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transform hover:scale-110 transition-transform">
+                        <i data-feather="bolt" class="w-7 h-7 text-yellow-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Faster than DIY</h3>
+                    <p class="text-gray-600 leading-relaxed">Landing page + payments setup in seconds, not days.</p>
+                    <div class="mt-4 flex items-center text-sm text-green-600">
+                        <i data-feather="trending-up" class="w-4 h-4 mr-1"></i>
+                        <span>10x faster than traditional builders</span>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-green-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                        <i data-feather="trending-up" class="w-6 h-6 text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">SEO-Optimized by Default</h3>
+                    <p class="text-gray-600">Built-in metadata, sitemaps, and fast load speed.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                        <i data-feather="dollar-sign" class="w-6 h-6 text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Stripe-Powered Monetization</h3>
+                    <p class="text-gray-600">Get paid directly; we only take a small platform fee.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover" data-aos="fade-up" data-aos-delay="400">
+                    <div class="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                        <i data-feather="bar-chart-2" class="w-6 h-6 text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Creator Analytics</h3>
+                    <p class="text-gray-600">Track sales, traffic, and conversions.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover" data-aos="fade-up" data-aos-delay="500">
+                    <div class="bg-pink-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                        <i data-feather="palette" class="w-6 h-6 text-pink-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Always On-Brand</h3>
+                    <p class="text-gray-600">Customize copy, media, and domain.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover" data-aos="fade-up" data-aos-delay="600">
+                    <div class="bg-indigo-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                        <i data-feather="shield" class="w-6 h-6 text-indigo-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Secure & Reliable</h3>
+                    <p class="text-gray-600">Enterprise-grade hosting with 99.9% uptime.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 md:py-32 bg-white -mt-16 md:-mt-24 overflow-visible">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Pick Your Speed</h2>
+                <p class="text-xl text-gray-600">Start free, scale forever — cancel in two clicks, no drama.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Starter Plan -->
+                <div class="border-2 border-gray-200 rounded-2xl p-8 hover:border-purple-600 transition-all card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold mb-2">Starter</h3>
+                        <div class="flex items-baseline">
+                            <span class="text-4xl font-bold">$49</span>
+                            <span class="text-gray-600 ml-2">/mo</span>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-2">Perfect for your first digital product</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <i data-feather="check" class="w-5 h-5 text-green-500 mr-3 mt-1"></i>
+                            <span class="text-gray-600">1 Landing Page</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="w-5 h-5 text-green-500 mr-3 mt-1"></i>
+                            <span class="text-gray-600">creatormoat.com subdomain</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="w-5 h-5 text-green-500 mr-3 mt-1"></i>
+                            <span class="text-gray-600">5% platform fee</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="w-5 h-5 text-green-500 mr-3 mt-1"></i>
+                            <span class="text-gray-600">Basic analytics</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="w-5 h-5 text-green-500 mr-3 mt-1"></i>
+                            <span class="text-gray-600">SEO-ready</span>
+                        </li>
+                    </ul>
+                    <button class="w-full border-2 border-gray-300 text-gray-700 py-3 rounded-lg hover:border-purple-600 hover:text-purple-600 transition-all">
+                        Get Started
+                    </button>
+                </div>
+
+                <!-- Pro Plan -->
+                <div class="pricing-card-featured border-2 border-purple-600 rounded-2xl p-8 bg-gradient-to-br from-purple-50 to-pink-50 relative z-10 lg:scale-105 overflow-visible" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg whitespace-nowrap z-30">
+                        ⚡ Most Popular
+                    </div>
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold mb-2">Pro</h3>
+                        <div class="flex items-baseline">
+                            <span class="text-4xl font-bold">$199</span>
+                            <span class="text-gray-600 ml-2">/mo</span>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-2">Unlock custom domains & lower fees</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <i data-feather="check" class="w-5 h-5 text-green-500 mr-3 mt-1"></i>
+                            <span class="text-gray-600">Up to 3 Landing Pages</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="w-5 h-5 text-green-500 mr-3 mt-1"></i>
+                            <span class="text-gray-600">1 Custom Domain</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="w-5 h-5 text-green-500 mr-3 mt-1"></i>
+                            <span class="text-gray-600">3% platform fee</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="w-5 h-5 text-green-500 mr-3 mt-1"></i>
+                            <span class="text-gray-600">Conversion analytics</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="w-5 h-5 text-green-500 mr-3 mt-1"></i>
+                            <span class="text-gray-600">Remove branding</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all btn-glow transform hover:scale-105">
+                        Start Free Trial
+                    </button>
+                </div>
+
+                <!-- Growth Plan -->
+                <div class="border-2 border-gray-200 rounded-2xl p-8 hover:border-purple-600 transition-all card-hover" data-aos="fade-up" data-aos-delay="300">
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold mb-2">Growth</h3>
+                        <div class="flex items-baseline">
+                            <span class="text-4xl font-bold">$499</span>
+                            <span class="text-gray-600 ml-2">/mo</span>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-2">For creators scaling to 6-figures</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <i data-feather="check" class="w-5 h-5 text-green-500 mr-3 mt-1"></i>
+                            <span class="text-gray-600">Up to 10 Landing Pages</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="w-5 h-5 text-green-500 mr-3 mt-1"></i>
+                            <span class="text-gray-600">Up to 3 Custom Domains</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="w-5 h-5 text-green-500 mr-3 mt-1"></i>
+                            <span class="text-gray-600">2% platform fee</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="w-5 h-5 text-green-500 mr-3 mt-1"></i>
+                            <span class="text-gray-600">Advanced analytics (LTV, cohorts, funnels)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="w-5 h-5 text-green-500 mr-3 mt-1"></i>
+                            <span class="text-gray-600">Full SEO optimization stack</span>
+                        </li>
+                    </ul>
+                    <button class="w-full border-2 border-gray-300 text-gray-700 py-3 rounded-lg hover:border-purple-600 hover:text-purple-600 transition-all">
+                        Get Started
+                    </button>
+                </div>
+
+                <!-- Scale Plan -->
+                <div class="border-2 border-gray-200 rounded-2xl p-8 hover:border-purple-600 transition-all card-hover" data-aos="fade-up" data-aos-delay="400">
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold mb-2">Scale</h3>
+                        <div class="flex items-baseline">
+                            <span class="text-4xl font-bold">$999</span>
+                            <span class="text-gray-600 ml-2">/mo</span>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-2">Agencies & serial founders</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <i data-feather="check" class="w-5 h-5 text-green-500 mr-3 mt-1"></i>
+                            <span class="text-gray-600">Up to 25 Landing Pages</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="w-5 h-5 text-green-500 mr-3 mt-1"></i>
+                            <span class="text-gray-600">Up to 5 Custom Domains</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="w-5 h-5 text-green-500 mr-3 mt-1"></i>
+                            <span class="text-gray-600">1% platform fee</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="w-5 h-5 text-green-500 mr-3 mt-1"></i>
+                            <span class="text-gray-600">Complete analytics suite</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="w-5 h-5 text-green-500 mr-3 mt-1"></i>
+                            <span class="text-gray-600">Premium support</span>
+                        </li>
+                    </ul>
+                    <button class="w-full border-2 border-gray-300 text-gray-700 py-3 rounded-lg hover:border-purple-600 hover:text-purple-600 transition-all">
+                        Get Started
+                    </button>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="border-2 border-gray-200 rounded-2xl p-8 hover:border-purple-600 transition-all card-hover" data-aos="fade-up" data-aos-delay="500">
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold mb-2">Enterprise</h3>
+                        <div class="flex items-baseline">
+                            <span class="text-4xl font-bold">Contact Us</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <i data-feather="check" class="w-5 h-5 text-green-500 mr-3 mt-1"></i>
+                            <span class="text-gray-600">Unlimited Pages & Domains</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="w-5 h-5 text-green-500 mr-3 mt-1"></i>
+                            <span class="text-gray-600">Custom platform fee</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="w-5 h-5 text-green-500 mr-3 mt-1"></i>
+                            <span class="text-gray-600">Compliance-ready hosting</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="w-5 h-5 text-green-500 mr-3 mt-1"></i>
+                            <span class="text-gray-600">Priority support & SLAs</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-all">
+                        Contact Sales
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="py-20 md:py-32 animated-gradient relative overflow-hidden -mt-12 md:-mt-16">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-white/10 rounded-full filter blur-3xl"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10" data-aos="fade-up">
+            <h2 class="text-4xl md:text-7xl font-black text-white mb-6 leading-tight">
+                Be First, Get Paid, <span class="text-yellow-300">Repeat.</span>
+            </h2>
+            <p class="text-xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
+                Every minute you wait, someone else eats your market. Hit publish before your coffee cools — Creator Moat™ makes it stupidly easy.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+                <button class="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-all text-lg transform hover:scale-105 shadow-2xl">
+                    Start Free Trial →
+                </button>
+                <button class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all text-lg">
+                    Watch 60-Second Demo
+                </button>
+            </div>
+            <p class="text-white/80">Live page + first sale possible today. No card. No code. No excuses.</p>
+            
+            <!-- Trust Indicators -->
+            <div class="flex justify-center items-center space-x-8 mt-12 text-white/70">
+                <div class="flex items-center space-x-2">
+                    <i data-feather="trending-up" class="w-5 h-5"></i>
+                    <span>$2.4M Paid Out</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <i data-feather="clock" class="w-5 h-5"></i>
+                    <span>47s Avg. Launch</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <i data-feather="star" class="w-5 h-5"></i>
+                    <span>4.9★ from 3,842 Reviews</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <span class="text-2xl font-bold gradient-text">Creator Moat™</span>
+                    <p class="text-gray-400 mt-4">Landing + Monetize in Seconds</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Product</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Features</a></li>
+                        <li><a href="#" class="hover:text-white">Pricing</a></li>
+                        <li><a href="#" class="hover:text-white">Templates</a></li>
+                        <li><a href="#" class="hover:text-white">Analytics</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Blog</a></li>
+                        <li><a href="#" class="hover:text-white">Docs</a></li>
+                        <li><a href="#" class="hover:text-white">Support</a></li>
+                        <li><a href="#" class="hover:text-white">Community</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">About</a></li>
+                        <li><a href="#" class="hover:text-white">Careers</a></li>
+                        <li><a href="#" class="hover:text-white">Privacy</a></li>
+                        <li><a href="#" class="hover:text-white">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Creator Moat™. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // Initialize Feather Icons
+        feather.replace();
+
+        // Mobile menu toggle
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const closeMenu = document.getElementById('close-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-full');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('translate-x-full');
+                }
+            });
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('shadow-2xl');
+                nav.style.background = 'rgba(255, 255, 255, 0.95)';
+            } else {
+                nav.classList.remove('shadow-2xl');
+                nav.style.background = 'rgba(255, 255, 255, 0.85)';
+            }
+        });
+
+        // Add parallax effect to hero section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.hero-gradient');
+            const speed = 0.2;
+            parallax.style.transform = `translateY(${scrolled * speed}px)`;
+        });
+
+        // Add intersection observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards
+        document.querySelectorAll('.card-hover').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
